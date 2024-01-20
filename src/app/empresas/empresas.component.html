@@ -1,0 +1,156 @@
+
+<div class="d-flex justify-content-between">
+  <div>
+    <h3 class="titulo h3 fw-bold">* EMPRESAS</h3>
+  </div>
+  <div>
+    <button type="button" class="btn btn-success fw-bold mb-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <!--   <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>  -->AGREGAR
+    </button>
+
+  </div>
+</div>
+<div class="linea"></div>
+
+<main class="card-body">
+
+  <div class="row mt-4">
+    <div class="col-sm-12 col-md-12 table-responsive">
+      <table datatable [dtOptions]="dtOptions"  class="table table-hover table-striped" >
+        <thead class="table-dark">
+          <tr>
+            <th>NOMBRE</th>
+            <th>RAZÓN SOCIAL</th>
+            <th>RFC</th>
+            <th>CORREO</th>
+            <th>NÚM. CONTACTO</th>
+            <th>CONTACTO</th>
+            <th>OPCIONES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>MARIA</td>
+            <td>LOPEZ</td>
+            <td>DÍAZ</td>
+            <td>correo@correo.com</td>
+            <td>1225364500</td>
+            <td>DANIEL DIAZ</td>
+            <td>
+              <a href="" class="btn_editar">
+                <svg class="icon_edit" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path fill="blue" d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg> Editar
+              </a>
+              <a href="" class="btn_eliminar">
+              <svg class="icon_delete" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path fill="red" d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg> Eliminar
+            </a>
+          </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 w-100 text-center" id="staticBackdropLabel">AGREGAR EMPRESA</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+
+        <div class="row">
+          <div class="col-sm-12 col-md-5">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 ">
+                <label for="formFile" class="form-label">Seleccionar Logotipo:</label>
+                <img src="/assets/img/icons/Photo.svg" alt="" id="imagenPrevisualizacion">
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12 mt-4 mb-4 text-center">
+<!--               <input class="form-control file-select" type="file" id="formFile" > -->
+            </div>
+
+          </div>
+          <div class="col-sm-12 col-md-7">
+            <div class="row">
+              <div class="col-sm-12 col-md-6">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Nombre:</label>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Razon Social:</label>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">RFC</label>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Correo Electrónico</label>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <div class="form-floating mb-3">
+                  <input type="tel" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Télefono de Contacto</label>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <div class="form-floating mb-3">
+                  <input type="tel" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Contacto</label>
+                </div>
+              </div>
+<!--               <div class="col-sm-12 col-md-6">
+                <div class="form-floating mb-3">
+                  <input type="password" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Contraseña</label>
+                </div>
+              </div> -->
+              <div class="col-sm-12 col-md-6">
+                <div class="form-floating mb-3">
+                  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected>--Seleccione--</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                  <label for="floatingSelect">Membresia</label>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-12">
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                  <label for="floatingTextarea2">Dirección</label>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="row mx-auto mb-3">
+        <div class="col-sm-12 col-md-12 d-flex">
+          <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">CANCELAR</button>
+          <button type="button" class="btn btn-primary ">GUARDAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
